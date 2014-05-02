@@ -1,6 +1,6 @@
-/* exported calculateDamage, weaponImg, animalID*/
+/* exported calculateDamage, weaponImg, fighterID*/
 
-var animalID = 0;
+var fighterID = 0;
 
 function calculateDamage(weapon){
   'use strict';

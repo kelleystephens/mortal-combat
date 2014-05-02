@@ -1,10 +1,10 @@
 /* exported Dragon */
 /* jshint unused:false */
-/* global calculateDamage:true, weaponImg:true, animalID:true */
+/* global calculateDamage:true, weaponImg:true, fighterID:true */
 
 class Dragon{
   constructor(gender, weapon, photo, name='No Name', age=0){  //this is function, must be called constructor, pass properties you want form main.js
-    this.id = animalID++;
+    this.id = fighterID++;
     this.name = name;
     this.age = age * 1; //passes in as string and then make into number
     this.gender = gender;

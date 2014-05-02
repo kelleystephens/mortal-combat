@@ -1,30 +1,37 @@
-@import url(http://fonts.googleapis.com/css?family=Crafty+Girls);
 
 body{
-  background-image: url('../media/background.jpeg');
+  background-image: url('../media/background.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
 
 #title{
   text-align: center;
-  font-family: 'Crafty Girls', cursive;
+  font-family: 'FrightWrite2';
   font-size: 50px;
   text-decoration: none;
+  margin-top: 0px;
+  color: #ffffff;
 }
 
-#controls1, #controls2{
+#controls{
   text-align: center;
-  width: 50%;
-  margin: 10px auto;
+  width: 170px;
+  margin: auto;
+  position: absolute;
+  top: 30px;
+  left: 0px;
 }
 
-#controls1 select, #controls2 input{
-  margin-left: 15px;
+#controls select, #controls input{
+display: block;
+margin: 15px 5px;
+width: 151px;
+font-family: 'FrightWrite2';
+font-size: 16px;
 }
 
 input{
-  font-family: 'Crafty Girls', cursive;
   font-size: 15px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.24);
@@ -49,25 +56,29 @@ input{
   margin: 10px auto;
   width: 80px;
   border-radius: 5px;
+  font-family: 'FrightWrite2';
+  font-size: 16px;
 }
 
 h1{
   text-align: center;
   text-decoration: underline;
   font-size: 35px;
+  color: #ffffff;
 }
 
-#animals{
+#fighters{
   width: 50%;
   margin: auto;
-  font-family: 'Crafty Girls', cursive;
+  font-family: 'FrightWrite2';
+  color: #ffffff;
 }
 
 .holder{
   width: 150px;
   display: inline-block;
   margin: auto 10px;
-  background-color: rgba(52, 110, 158, 0.46);
+  background-color: rgba(52, 110, 158, 0.59);
   text-align: center;
   border-radius: 10px;
   box-shadow: 2px 2px 4px #213753;
@@ -99,8 +110,9 @@ h1{
   width: 50px;
   height: 50px;
   background-image: url('../media/train.png');
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   margin: auto;
-  color: white;
-  line-height: 50px;
+
 }

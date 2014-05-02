@@ -1,4 +1,4 @@
-/* global Dragon:true, Dog:true, Cat:true, Sloth:true */
+/* global Dragon:true, Ninja:true, Clown:true, Alien:true */
 /* jshint unused:false, camelcase:false */
 
 (function(){
@@ -6,18 +6,19 @@
 
   $(document).ready(init);
 
-  let animals = [];
+  let fighters = [];
 
   function init(){
     $('#add').click(add);
-    $('#animals').on('click', '.train', train);
+    $('#fighters').on('click', '.train', train);
   }
 
-  function train(){
+  function train(event){
+    event.preventDefault();
     let num = $(this).closest('.holder').data('id');
     let amt = Math.ceil(Math.random() * 3);
-    var damage = animals[num].damage;
-    animals[num].damage = damage + amt;
+    var damage = fighters[num].damage;
+    fighters[num].damage = damage + amt;
   }
 
   function add(){
@@ -27,35 +28,35 @@
     let gender = $('#gender').val();
     let photo = $('#photo').val();
     let weapon = $('#weapon').val();
-    let animal;
+    let fighter;
 
     switch(species){
     case 'Dragon':
-      animal = new Dragon(gender, weapon, photo, name, age);
+      fighter = new Dragon(gender, weapon, photo, name, age);
       break;
-    case 'Dog':
-      animal = new Dog(gender, weapon, photo, name, age);
+    case 'Ninja':
+      fighter = new Ninja(gender, weapon, photo, name, age);
       break;
-    case 'Cat':
-      animal = new Cat(gender, weapon, photo, name, age);
+    case 'Clown':
+      fighter = new Clown(gender, weapon, photo, name, age);
       break;
-    case 'Sloth':
-      animal = new Sloth(gender, weapon, photo, name, age);
+    case 'Alien':
+      fighter = new Alien(gender, weapon, photo, name, age);
     }
-    animals.push(animal);
-    display(animal);
+    fighters.push(fighter);
+    display(fighter);
   }
 
-  function display(animal){
-    $(`#${animal.species}`).append(`<div data-id=${animal.id} class=holder>
-                            <div class=photo style='background-image:url("${animal.photo}")'></div>
-                            <div class=info><div>Name: ${animal.name}</div>
-                            <div>Age: ${animal.age}</div>
-                            <div>Gender: ${animal.gender}</div>
-                            <div>Health: ${animal.health}%</div>
-                            <div class=weapon style='background-image:url("${animal.weaponImg}")'></div>
-                            <div>Damage: ${animal.damage}</div>
-                            <div class=train>TRAIN!</div></div>
+  function display(fighter){
+    $(`#${fighter.species}`).append(`<div data-id=${fighter.id} class=holder>
+                            <div class=photo style='background-image:url("${fighter.photo}")'></div>
+                            <div class=info><div>Name: ${fighter.name}</div>
+                            <div>Age: ${fighter.age}</div>
+                            <div>Gender: ${fighter.gender}</div>
+                            <div>Health: ${fighter.health}%</div>
+                            <div class=weapon style='background-image:url("${fighter.weaponImg}")'></div>
+                            <div>Damage: ${fighter.damage}</div>
+                            <div class=train></div></div>
                             </div>`);
   }
 
