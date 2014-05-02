@@ -2,15 +2,72 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title JS++
+    title Happy Tails
     link(rel='stylesheet', href='./css/app.css')
+    link(rel='stylesheet', href='./css/buttons.css')
   body
-    h1 JS++
+    h1#title Happy Tails
+
+    #controls1
+      select#species.button-dropdown.button.button-rounded.button-flat-primary(data-buttons='dropdown')
+        img.fa.fa-caret-down
+        option Select Species
+        option Dragon
+        option Dog
+        option Cat
+        option Sloth
+      select#gender.button-dropdown.button.button-rounded.button-flat-primary(data-buttons='dropdown')
+        img.fa.fa-caret-down
+        option Select Gender
+        option Male
+        option Female
+      select#photo.button-dropdown.button.button-rounded.button-flat-primary(data-buttons='dropdown')
+        img.fa.fa-caret-down
+        option Select Photo
+        option(value='../media/dragon.png') Dragon 1
+        option(value='../media/dragon2.png') Dragon 2
+        option(value='../media/dragon3.png') Dragon 3
+        option(value='../media/dog.png') Dog 1
+        option(value='../media/dog1.png') Dog 2
+        option(value='../media/dog2.png') Dog 3
+        option(value='../media/cat.png') Cat 1
+        option(value='../media/cat1.png') Cat 2
+        option(value='../media/cat2.png') Cat 3
+        option(value='../media/sloth.png') Sloth 1
+        option(value='../media/sloth1.png') Sloth 2
+        option(value='../media/sloth2.png') Sloth 3
+      select#weapon.button-dropdown.button.button-rounded.button-flat-primary(data-buttons='dropdown')
+        img.fa.fa-caret-down
+        option Select Weapon
+        option Poison
+        option Fire
+        option Arrow
+        option Axe
+    #controls2
+      input#name(type='text' placeholder='Name')
+      input#age(type='text' placeholder='Age')
+      a(class='button glow button-primary', id='add') Add
+    #animals
+      h1 Animals
+      #dragon
+        h2 Dragons:
+      #dog
+        h2 Dogs:
+      #cat
+        h2 Cats:
+      #sloth
+        h2 Sloths:
 
     script(src='./js/vendor/traceur.js')
     script(src='./js/vendor/experimental.js')
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/vendor/lodash-2.4.1.js')
     script(src='./js/vendor/moment-2.6.0.js')
-    script(src='./js/es5/main.js')
+    script(src='http://code.jquery.com/jquery-1.10.1.min.js')
+    script(src='./js/buttons.js')
+    script(src='./js/es6/utility.js')
+    script(src='./js/es6/dragon.js')
+    script(src='./js/es6/dog.js')
+    script(src='./js/es6/cat.js')
+    script(src='./js/es6/sloth.js')
     script(src='./js/es6/main.js')

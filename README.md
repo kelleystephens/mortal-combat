@@ -1,10 +1,6 @@
-# client-template
+#Happy Tails
+============
 
-Serves as a template for client JavaScript applications.
+Animal Shelter
 
-It uses:
-* Jade
-* Less
-* Grunt
-* JSHint
-* Node.js
+Practicing Object Oriented Programming
